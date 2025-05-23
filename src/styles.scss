@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'app/core/variables.scss';
+
+
+* {
+    box-sizing: border-box;
+    font-family: var(--font-primary);
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+}
+
+p, h1, h2, h3, h4, h5, h6, button {
+    color: var(--color-text);
+    letter-spacing: 0.5px;
+}
+
+.bg-primary {
+    background-color: var(--color-primary);
+}
+
+.bg-secondary {
+    background-color: var(--color-secondary);
+}
