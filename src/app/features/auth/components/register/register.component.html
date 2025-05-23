@@ -1,0 +1,21 @@
+<div class="register">
+
+    <h2>Criar Conta</h2>
+
+    <form class="register__form" [formGroup]="form_register" (ngSubmit)="onSubmit()">
+
+        <app-input-profile-picture formControlName="img_profile"></app-input-profile-picture>   
+
+        <app-input-text [control]="name" [type]="'text'" [form]="form_register" [placeholder]="'nome'" [controlName]="'name'"></app-input-text>
+        
+        <app-input-text [control]="email" [type]="'email'" [form]="form_register" [placeholder]="'E-mail'" [controlName]="'email'"></app-input-text>
+
+        <app-input-text [control]="password" [type]="'password'" [form]="form_register" [placeholder]="'senha'" [controlName]="'password'"></app-input-text>
+
+        <app-input-text [control]="confirmPassword" [type]="'password'" [form]="form_register" [placeholder]="'Confirma senha'" [controlName]="'confirm_password'"></app-input-text>
+
+        <app-button-submit label="Criar"></app-button-submit>
+
+    </form>
+
+</div>

@@ -1,0 +1,58 @@
+
+.auth {
+    width: 100dvw;
+    min-height: 100dvh;
+}
+
+.container {
+    padding: 30px 20px;
+}
+
+header {
+    margin-top: 20px;
+}
+
+.container-form {
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .right {
+
+        .message {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            font-weight: 600;
+            padding: 10px 22px;
+            background-color: transparent;
+            border: 1px solid var(--color-text);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            span {
+                font-size: 0.90rem;
+            }
+        }
+
+        .btn-to-login {
+
+            img {
+                transform: rotate(180deg);
+            }
+        }
+
+    }
+    
+}
+
+
+
+

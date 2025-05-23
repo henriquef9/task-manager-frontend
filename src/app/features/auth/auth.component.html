@@ -1,0 +1,27 @@
+
+<div class="auth"  [ngClass]="{'bg-primary': type_form, 'bg-secondary': !type_form}">
+    <div class="container">
+    
+        <header>
+            <div class="logo">
+                <app-logo></app-logo>
+            </div>
+        </header>
+    
+        <div class="container-form">
+
+            <div class="left">
+                <router-outlet></router-outlet>
+            </div>
+
+            <div class="right">
+                <p class="message">
+                    {{message}}
+                </p>
+                <button [routerLink]="['/auth', !type_form ? 'login' : 'register']" class="btn" [ngClass]="{'btn-to-login': !type_form}" (click)="formToggle()" ><span>{{text_btn}}</span> <img src="/assets/chevrons-right.svg" alt=""> </button>
+            </div>
+            
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="image-upload">
+  <div class="preview" *ngIf="previewUrl; else placeholder">
+    <img class="preview__img" [src]="previewUrl" alt="Preview" />
+    <button type="button" (click)="removeFile()"><img src="assets/close.svg" alt=""></button>
+  </div>
+
+  <ng-template #placeholder>
+    <div class="placeholder">
+    </div>
+  </ng-template>
+
+  <label for="img"></label>
+
+  <input id="img" type="file" accept="image/*" (change)="onFileSelected($event)" />
+</div>

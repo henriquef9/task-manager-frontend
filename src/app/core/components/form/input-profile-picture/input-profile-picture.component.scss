@@ -1,0 +1,67 @@
+.image-upload {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: start;
+
+  position: relative;
+
+  .preview {
+    position: relative;
+
+    &__img {
+      width: 90px;
+      height: 90px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 2px solid var(--color-text);
+    }
+
+    button {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background-color: #ff4d4f;
+      border: none;
+      border-radius: 4px;
+      padding: 4px 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 20px;
+        height: 20px;
+      }
+
+      z-index: 1000;
+
+    }
+  }
+
+  .placeholder {
+    width: 90px;
+    height: 90px;
+    background: url('/assets/camera.svg') no-repeat center center;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed var(--color-text);
+  }
+
+  label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+  }
+
+  input {
+    display: none;
+  }
+
+}

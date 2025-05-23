@@ -1,0 +1,9 @@
+ <div class="input-gruop" [formGroup]="form">
+    <input [type]="type" [placeholder]="placeholder" [formControlName]="controlName" [mask]="mask" [ngClass]="{'input-error': isError}">
+
+    <div class="error-message" *ngIf="isError">
+        <p>{{errorMessage()}}</p>
+    </div>
+</div>
+
+    

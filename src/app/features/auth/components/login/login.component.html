@@ -1,0 +1,15 @@
+<div class="login">
+
+    <h2>Login</h2>
+
+    <form class="login__form" [formGroup]="form_login" (ngSubmit)="onSubmit()">
+
+        <app-input-text [control]="name" [type]="'text'" [form]="form_login" [placeholder]="'nome'" [controlName]="'name'"></app-input-text>
+
+        <app-input-text [control]="password" [type]="'password'" [form]="form_login" [placeholder]="'senha'" [controlName]="'password'"></app-input-text>
+
+        <app-button-submit label="Entrar"></app-button-submit>
+
+    </form>
+
+</div>

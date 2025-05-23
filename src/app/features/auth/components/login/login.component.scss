@@ -1,0 +1,23 @@
+
+.login {
+
+    padding: 20px 0px;
+
+    h2 {
+        font-size: 1.8rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-bottom: 60px;
+    }
+
+    &__form {
+
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+    }
+
+}
