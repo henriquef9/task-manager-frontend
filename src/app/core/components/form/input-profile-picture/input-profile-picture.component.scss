@@ -64,4 +64,8 @@
     display: none;
   }
 
+  .error {
+    border-color: var(--color-error) !important;
+  }
+
 }

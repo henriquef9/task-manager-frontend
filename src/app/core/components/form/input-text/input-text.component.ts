@@ -32,6 +32,8 @@ export class InputTextComponent {
         return `Mínimo de ${this.control.errors['minlength'].requiredLength} caracteres`;
       if (this.control.errors['maxlength'])
         return `Máximo de ${this.control.errors['maxlength'].requiredLength} caracteres`;
+      if(this.control.errors['invalidConfirmPassword'])
+        return `As senhas não coincidem.`;
     }
     return 'Campo inválido';
   }
