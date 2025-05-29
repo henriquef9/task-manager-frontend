@@ -25,3 +25,36 @@
     }
     
 }
+
+@media(min-width: 750px){
+
+    .login {       
+        h2 {
+            font-size: 1.85rem;
+        }
+
+        &__form {
+
+            gap: 15px;
+
+        }
+    }
+
+}
+
+@media(min-width: 998px){
+
+    .register {       
+        h2 {
+            font-size: 2rem;
+        }
+
+         &__form {
+
+            gap: 20px;
+
+        }
+    }
+
+
+}

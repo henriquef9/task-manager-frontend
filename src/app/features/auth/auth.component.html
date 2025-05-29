@@ -10,11 +10,11 @@
     
         <div class="container-form">
 
-            <div class="left">
+            <div class="left" [ngClass]="{'bg-primary': type_form && width > 750, 'bg-secondary': !type_form && width > 750}">
                 <router-outlet></router-outlet>
             </div>
 
-            <div class="right">
+            <div class="right" [ngClass]="{'bg-primary': !type_form && width > 750, 'bg-secondary': type_form && width > 750}">
                 <p class="message">
                     {{message}}
                 </p>

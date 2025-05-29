@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, HostListener, inject, OnInit } from '@angular/core';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { LogoComponent } from '../../core/components/logo/logo.component';
 import { NgClass } from '@angular/common';
@@ -17,6 +17,8 @@ export class AuthComponent implements OnInit {
   message: string = 'Que bom te ver de novo! Faça login para acessar sua conta. Se ainda não tem uma, cadastre-se.'; 
   text_btn: string = 'Criar Conta';
 
+  width: number = 0;
+
   ngOnInit(): void {
       
     if(this._route.url == '/auth/register'){
@@ -24,6 +26,15 @@ export class AuthComponent implements OnInit {
       this.text_btn = 'Login';    
       this.type_form = false; 
     }
+
+    this.onResize()
+
+  }
+
+  @HostListener('window:resize')
+  onResize() {
+    this.width = window.innerWidth;
+    console.log('Tamanho da janela:', window.innerWidth);
 
   }
 

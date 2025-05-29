@@ -3,6 +3,7 @@ import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } 
 import { InputTextComponent } from '../../../../core/components/form/input-text/input-text.component';
 import { ButtonSubmitComponent } from '../../../../core/components/form/button-submit/button-submit.component';
 import { InputProfilePictureComponent } from '../../../../core/components/form/input-profile-picture/input-profile-picture.component';
+import { confirmPasswordValidator } from '../../../../shared/validators/confirm-password.validator';
 
 
 @Component({
@@ -17,15 +18,19 @@ export class RegisterComponent implements OnInit {
 
   _fb: FormBuilder = inject(FormBuilder);
 
+  fileSelection: File | null = null;
 
   ngOnInit(): void {
     
     this.form_register = this._fb.group({
-      img_profile: new FormControl(null),
+      img_profile: new FormControl(''),
       name: new FormControl('', [Validators.required]),
       email: new FormControl('', [Validators.required, Validators.email]),
       password: new FormControl('', [Validators.required, Validators.minLength(6)]),
       confirm_password: new FormControl('', [Validators.required, Validators.minLength(6)])
+    }, 
+    {
+      validators: confirmPasswordValidator()
     });
 
   }
@@ -54,11 +59,13 @@ export class RegisterComponent implements OnInit {
   onSubmit() {
 
     if(this.form_register.valid){
-      console.log(this.form_register, 'Válido');
+      console.log(this.form_register.value, this.fileSelection);
+      console.log('Válido');
     }else{
 
       this.form_register.markAllAsTouched();
-      console.log(this.form_register, 'Inválido');
+      console.log(this.form_register.value, this.fileSelection);
+      console.log('Inválido');
     }
 
   }

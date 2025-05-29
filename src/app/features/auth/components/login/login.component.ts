@@ -37,10 +37,10 @@ export class LoginComponent implements OnInit {
   onSubmit() {
 
     if(this.form_login.valid){
-      console.log(this.form_login, 'Válido');
+      console.log(this.form_login.value, 'Válido');
     }else{
       this.form_login.markAllAsTouched();
-      console.log(this.form_login, 'Inválido');
+      console.log(this.form_login.value, 'Inválido');
     }
 
   }

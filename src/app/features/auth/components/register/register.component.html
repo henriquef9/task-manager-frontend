@@ -4,7 +4,7 @@
 
     <form class="register__form" [formGroup]="form_register" (ngSubmit)="onSubmit()">
 
-        <app-input-profile-picture formControlName="img_profile"></app-input-profile-picture>   
+        <app-input-profile-picture [form]="form_register" [control]="img_profile" [controlName]="'img_profile'" (onFile)="fileSelection = $event" ></app-input-profile-picture>   
 
         <app-input-text [control]="name" [type]="'text'" [form]="form_register" [placeholder]="'nome'" [controlName]="'name'"></app-input-text>
         
